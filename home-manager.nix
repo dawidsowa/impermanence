@@ -336,6 +336,7 @@ in
           ''
             mkdir -p ${targetDir}
             mkdir -p ${mountPoint}
+            PATH="$PATH:/usr/bin"
 
             if ${mount} | grep -F ${mountPoint}' ' >/dev/null; then
                 if ! ${mount} | grep -F ${mountPoint}' ' | grep -F bindfs; then
