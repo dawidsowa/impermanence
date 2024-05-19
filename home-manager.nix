@@ -20,6 +20,7 @@ let
 
   mount = "${pkgs.util-linux}/bin/mount";
   unmountScript = mountPoint: tries: sleep: ''
+    PATH="$PATH:/usr/bin"
     triesLeft=${toString tries}
     if ${mount} | grep -F ${mountPoint}' ' >/dev/null; then
         while (( triesLeft > 0 )); do
