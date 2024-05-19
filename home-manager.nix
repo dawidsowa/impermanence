@@ -286,7 +286,7 @@ in
                 Type = "forking";
                 ExecStart = "${startScript}";
                 ExecStop = "${stopScript}";
-                Environment = "PATH=${makeBinPath [ pkgs.coreutils pkgs.util-linux pkgs.gnugrep pkgs.bindfs ]}:/run/wrappers/bin";
+                Environment = "PATH=${makeBinPath [ pkgs.coreutils pkgs.util-linux pkgs.gnugrep pkgs.bindfs ]}:/run/wrappers/bin:/usr/bin";
               };
             };
           };
